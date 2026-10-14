@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Galeria 9999 em 1 — Fliperama 3D/2D</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <div id="topbar">
+    <span id="logo">👾 GALERIA 9999 EM 1</span>
+    <span class="pill" id="tickets">🎟️ 0 tickets</span>
+    <span class="pill" id="record">🏆 recorde 0</span>
+    <span class="pill" id="powers">⭐ 0</span>
+    <button class="iconbtn" id="btn-crt" title="Modo CRT retrô">📺</button>
+    <button class="iconbtn" id="btn-sound" title="Som">🔊</button>
+    <button class="iconbtn" id="btn-help" title="Ajuda">❓</button>
+  </div>
+  <div id="stage">
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="crt"></div>
+    <div id="hud-game">
+      <button id="btn-exit">✕ SAIR</button>
+    </div>
+    <div id="prompt"></div>
+    <div id="toast"></div>
+    <div id="touch">
+      <div id="joy"><div id="stick"></div></div>
+      <div id="btns">
+        <button class="tbtn" id="btnB">B<br>·</button>
+        <button class="tbtn" id="btnE">E<br>ENTRAR</button>
+        <button class="tbtn" id="btnA">A<br>🔥</button>
+      </div>
+    </div>
+    <div class="overlay" id="menu">
+      <div class="card">
+        <h1><span class="a">GALERIA</span> <span class="b">9999</span> <span class="c">EM 1</span></h1>
+        <p>Ande pelo fliperama neon, atravesse os <b>portais</b> e jogue nos <b>telões multimídia</b>! São <b>11 clássicos retrô</b> + <b>portal aleatório 🎰</b>, com <b>power-ups e recompensas</b> em todos os jogos. Ganhe tickets! 🎟️</p>
+        <div class="skins" id="skins"></div>
+        <button class="bigbtn" id="btn-play">▶ ENTRAR NO FLIPERAMA</button>
+        <div class="keys">
+          <div>🕹️ <b>Mover:</b> WASD / setas / joystick (celular)</div>
+          <div>🚪 <b>Portais:</b> chegue perto e aperte ESPAÇO / ENTER</div>
+          <div>🔥 <b>Ação/atirar:</b> Espaço / botão A</div>
+          <div>🚪 <b>Sair do jogo:</b> ESC ou botão ✕ SAIR</div>
+          <div>⭐ <b>Power-ups:</b> caem nos jogos — pegue!</div>
+          <div>🎱 <b>Novidades:</b> sinuca e tetris!</div>
+        </div>
+        <div class="hint">Funciona em celular e tablet • toque e arraste também funcionam dentro dos minigames</div>
+      </div>
+    </div>
+    <div class="overlay" id="help" style="display:none">
+      <div class="card">
+        <h1><span class="c">COMO JOGAR</span></h1>
+        <p>🌀 Ande até um <b>portal</b> e aperte <b>ESPAÇO / ENTER</b> (ou botão E) para entrar.<br>Para sair do joguinho: <b>ESC</b> ou botão <b>✕ SAIR</b>.</p>
+        <p>🕹️ <b>Tanque:</b> ⭐ tiro rápido, 🛡 escudo, 💣 bomba, ❤ vida &nbsp;•&nbsp; 🐍 <b>Cobrinha:</b> maçã dourada vale 150!<br>🧱 <b>Tijolinhos:</b> cápsulas L (raquete), M (multibola), ❤ vida &nbsp;•&nbsp; 🚀 <b>Navinha:</b> P tiro duplo, S escudo, B bomba<br>🏎️ <b>Corrida:</b> ⛽ pontos, 🛡 protege batida, ⭐ invencível &nbsp;•&nbsp; 🏓 <b>Pong:</b> orbes de raquete gigante e câmera lenta<br>🏀 <b>Basquete:</b> 10 arremessos &nbsp;•&nbsp; 🎯 <b>Tiro ao alvo:</b> 45s, mire no centro! &nbsp;•&nbsp; ⛳ <b>Golfe:</b> 3 buracos<br>🎱 <b>Sinuca:</b> encaçape as 6 bolas em 15 tacadas! &nbsp;•&nbsp; 🟪 <b>Tetris:</b> complete linhas, sobreviva!</p>
+        <button class="bigbtn" id="btn-close-help">FECHAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="minigames.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
